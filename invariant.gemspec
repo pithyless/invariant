@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |gem|
   gem.name          = 'invariant'
-  gem.version       = '0.0.1'
+  gem.version       = '0.1.0'
   gem.authors       = ["Norbert Wojtowicz"]
   gem.email         = ["wojtowicz.norbert@gmail.com"]
   gem.description   = 'Document your code invariants'
