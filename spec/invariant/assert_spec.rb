@@ -18,12 +18,12 @@ describe 'Invariant Assertion' do
       end
 
       it 'returns nil when condition is true' do
-        expect{ assert true }.to_not raise_error Invariant::AssertionError
+        expect{ assert true }.to_not raise_error
         assert(true).should be_nil
       end
 
       it 'returns nil when condition evaluates to true' do
-        expect{ assert 'This evaluates to true' }.to_not raise_error Invariant::AssertionError
+        expect{ assert 'This evaluates to true' }.to_not raise_error
         assert('This evaluates to true').should be_nil
       end
     end
@@ -34,7 +34,7 @@ describe 'Invariant Assertion' do
       end
 
       it 'returns nil without error when condition evaluates to true' do
-        expect{ assert 'This evaluates to true', 'The error message' }.to_not raise_error(Invariant::AssertionError)
+        expect{ assert 'This evaluates to true', 'The error message' }.to_not raise_error
         assert('This evaluates to true').should be_nil
       end
     end

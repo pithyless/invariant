@@ -16,4 +16,15 @@ describe Invariant do
     end
   end
 
+  describe '::failure_handler' do
+    it 'calls the block with assertion failures' do
+      block = Proc.new {}
+      block.should_receive(:call).with("some message")
+
+      Invariant.failure_handler(&block)
+
+      expect { assert(false, "some message") }.not_to raise_error
+    end
+  end
+
 end
