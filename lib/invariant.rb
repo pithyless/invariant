@@ -3,7 +3,7 @@ require "singleton"
 class Invariant
   include Singleton
 
-  class AssertionError < StandardError
+  class AssertionError < Exception
   end
 
   attr_accessor :failure_handler
